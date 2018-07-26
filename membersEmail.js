@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	$("#download").click(function() {
 
-		$("#downloadEmail").filter(function() {
+		$("#download").filter(function() {
 			var userEmail = $("#emailInput").val();
 			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
@@ -16,8 +16,6 @@ $(document).ready(function() {
 
 
 	});
-
-	confirm("hello");
 
 
 
