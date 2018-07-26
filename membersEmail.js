@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	$("#download").focuseout(function() {
+	$("#download").click(function() {
 
 		$("#download").filter(function() {
 			var userEmail = $("#download").val();
