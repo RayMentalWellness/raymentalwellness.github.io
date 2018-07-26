@@ -19,7 +19,9 @@ $(document).ready(function() {
 			  		} 
 		  		emailjs.send(service_id,template_id,template_params);
 				alert("Thank you for your valid email");
+				$("#emailInput").val("");
 				$("#download").hide();
+
 
 			} else {
 				alert("you should enter an email");
