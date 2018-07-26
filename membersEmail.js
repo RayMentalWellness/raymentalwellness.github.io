@@ -1,15 +1,26 @@
 $(document).ready(function() {
 
 	$("#signUp").click(function() {
-
-		$("#signUp").filter(function() {
+		$("#emailInput").filter(function() {
 			var userEmail = $("#emailInput").val();
 			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,255})?$/;
 
 			if(!emailReg.test(userEmail)) {
 				alert("Please enter valid email");
+
 			} else if(emailReg.test(userEmail)) {
+				emailjs.init("user_t9dhzdnq135YXSGrhqJWe");
+			      var service_id = 'gmail';
+			      var template_id = 'template_jNAnYR13';
+			      var template_params = {
+				      to_name: 'Albert',
+				      reply_email: $("#emailInput").val(),
+				      message: 'It works!'
+			  		} 
+		  		emailjs.send(service_id,template_id,template_params);
 				alert("Thank you for your valid email");
+				$("#download").hide();
+
 			} else {
 				alert("you should enter an email");
 			}
@@ -19,10 +30,8 @@ $(document).ready(function() {
 
 
 	});
-
-
-
 });
+
 
 // Slideshow Go
 var slideIndex = 1;
