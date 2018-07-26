@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 		$("#signUp").filter(function() {
 			var userEmail = $("#emailInput").val();
-			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,255})?$/;
 
 			if(!emailReg.test(userEmail)) {
 				alert("Please enter valid email");
