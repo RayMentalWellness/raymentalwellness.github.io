@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Ray Mental Wellness</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122868530-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122868530-1');
+</script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,6 +21,7 @@ body {font-size: 16px;}
 img {margin-bottom: -8px;}
 .mySlides {display: none;}
 </style>
+</head>
 <body class="w3-content w3-black" style="max-width:1500px;">
 <!-- Header with Slideshow -->
 <header class="w3-display-container w3-center">
@@ -20,7 +30,7 @@ img {margin-bottom: -8px;}
     <img class="w3-image" src="assets/headerimage1.jpg" alt="Image 1" style="min-width:500px" width="1500" height="1000">
     <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
       <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
-        <h1 class="w3-xlarge">Take control of your Mental State with Ray</h1>
+        <h1 class="w3-xlarge w3-text-green">Take control of your Mental State with Ray</h1>
         <hr class="w3-opacity">
         <p>Sign up for access to the Beta when it releases</p>
         <p><button class="w3-button w3-block w3-green w3-round" onclick="document.getElementById('download').style.display='block'">Sign Up</i></button></p>
@@ -42,7 +52,7 @@ img {margin-bottom: -8px;}
     <img class="w3-image" src="assets/headerimage1.jpg" alt="Image 3" style="min-width:500px" width="1500" height="1000">
     <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
       <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
-        <h1 class="w3-xlarge">Take control of your Mental State with Ray</h1>
+        <h1 class="w3-xlarge w3-text-indigo">Take control of your Mental State with Ray</h1>
         <hr class="w3-opacity">
         <p>Sign up for access to the beta when it releases</p>
         <p><button class="w3-button w3-block w3-indigo w3-round" onclick="document.getElementById('download').style.display='block'">Sign Up</i></button></p>
@@ -63,7 +73,7 @@ img {margin-bottom: -8px;}
       <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small" onclick="document.getElementById('download').style.display='block'">Sign Up</button>
     </div>
     <div class="w3-col l4 m6">
-      <img src="/w3images/img_app.jpg" class="w3-image w3-right w3-hide-small" width="335" height="471">
+      <img src="assets/logo.png" class="w3-image w3-right w3-hide-small" width="335" height="471">
       <div class="w3-center w3-hide-large w3-hide-medium">
         <button class="w3-button w3-block w3-padding-large" onclick="document.getElementById('download').style.display='block'">
           <i class="fa fa-download"></i> Download Application
@@ -81,7 +91,6 @@ img {margin-bottom: -8px;}
       <i onclick="document.getElementById('download').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
       <h2 class="w3-wide">SIGN UP</h2>
       <p>Sign up for our email list to be notified when the app becomes available</p>
-      <i class="fa fa-apple w3-large"></i>
       <p><input class="w3-input w3-border" id="emailInput" type="text" placeholder="Enter e-mail"></p>
       <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" id="signUp">Sign Up</button>
     </div>
