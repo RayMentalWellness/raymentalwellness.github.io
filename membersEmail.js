@@ -6,10 +6,12 @@ $(document).ready(function() {
 			var userEmail = $("#emailInput").val();
 			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
-			if(!emailReg.test(userEmail) && $("#emailInput").val(" ")) {
+			if(!emailReg.test(userEmail)) {
 				alert("Please enter valid email");
-			} else {
+			} else if(emailReg.test(userEmail)) {
 				alert("Thank you for your valid email");
+			} else {
+				alert("you should enter an email");
 			}
 
 
