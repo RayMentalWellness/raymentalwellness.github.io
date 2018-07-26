@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-	$("#download").click(function() {
+	$("#signUp").click(function() {
 
-		$("#download").filter(function() {
+		$("#signUp").filter(function() {
 			var userEmail = $("#emailInput").val();
 			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
