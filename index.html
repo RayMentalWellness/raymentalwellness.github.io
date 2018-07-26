@@ -87,7 +87,7 @@ img {margin-bottom: -8px;}
       <p>Download the app in AppStore, Google Play or Microsoft Store.</p>
       <i class="fa fa-apple w3-large"></i>
       <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('download').style.display='none'">Fake Download</button>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" id="downloadEmail">Fake Download</button>
     </div>
   </div>
 </div>
@@ -222,26 +222,8 @@ img {margin-bottom: -8px;}
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
-<script>
-// Slideshow
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="membersEmail.js"></script>
 
 </body>
 </html>
