@@ -5,7 +5,8 @@ $(document).ready(function() {
 		$("#downloadEmail").filter(function() {
 			var userEmail = $("#emailInput").val();
 			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-			if(!emailReg.test(userEmail)) {
+
+			if(emailReg.test(userEmail)) {
 				alert("Please enter valid email");
 			} else {
 				alert("Thank you for your valid email");
