@@ -8,9 +8,12 @@ $(document).ready(function() {
 
 			if(!emailReg.test(userEmail) && $("#emailInput").val(" ")) {
 				alert("Please enter valid email");
-			} else {
+			}
+			
+			if(emailReg.test(userEmail)) {
 				alert("Thank you for your valid email");
 			}
+
 
 		});
 
