@@ -1,17 +1,17 @@
 $(document).ready(function() {
 
-	$("#signUp").click(function() {
+	$("#download").click(function() {
 
-		$("#signUp").filter(function() {
+		$("#download").filter(function() {
 			var userEmail = $("#emailInput").val();
-			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,255})?$/;
+			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
-			if(!emailReg.test(userEmail)) {
+			if(!emailReg.test(userEmail) && $("#emailInput").val(" ")) {
 				alert("Please enter valid email");
-			} else if(emailReg.test(userEmail)) {
+			}
+			
+			if(emailReg.test(userEmail)) {
 				alert("Thank you for your valid email");
-			} else {
-				alert("you should enter an email");
 			}
 
 
