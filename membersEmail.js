@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 });
 
-// Slideshow
+// Slideshow Go
 var slideIndex = 1;
 showDivs(slideIndex);
 
