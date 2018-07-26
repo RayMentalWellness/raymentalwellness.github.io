@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 		$("#download").filter(function() {
 			var userEmail = $("#download").val();
-			var enailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 			if(!emailReg.test(userEmail)) {
 				alert("Please enter valid email");
 			} else {
