@@ -12,7 +12,8 @@
 
   gtag('config', 'UA-122868530-1');
 </script>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -20,14 +21,83 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size: 16px;}
 img {margin-bottom: -8px;}
 .mySlides {display: none;}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    z-index: -1000;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.topnav2 {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav2 a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    z-index: -1000;
+}
+
+/* Change the color of links on hover */
+.topnav2 a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav2 a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
 </style>
 </head>
 <body class="w3-content w3-black" style="max-width:1500px;">
 <!-- Header with Slideshow -->
+<div class="topnav">
+  <a href="#slideshow">Slideshow</a>
+  <a href="#app">The App</a>
+  <a href="#mission">Our Misson</a>
+  <a href="#features">Features</a>
+  <a href="#pricing">Add Ons</a>
+  <a href="#contact">Contact Us</a>
+</div>
+<br/>
+<br/>
 <header class="w3-display-container w3-center">
+  <a id="slideshow">
   <button class="w3-button w3-block w3-green w3-hide-large w3-hide-medium" onclick="document.getElementById('download').style.display='block'">Sign Up</button>
   <div class="mySlides w3-animate-opacity">
-    <img class="w3-image" src="assets/headerimage1.jpg" alt="Image 1" style="width:100%">
+    <img class="w3-image" src="assets/slide1.png" alt="Image 1" style="width:100%">
     <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
       <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
         <h1 class="w3-xlarge w3-text-green">Take control of your Mental State with Ray</h1>
@@ -38,7 +108,7 @@ img {margin-bottom: -8px;}
     </div>
   </div>
   <div class="mySlides w3-animate-opacity">
-    <img class="w3-image" src="assets/headerimage1.jpg" alt="Image 2" style="width:100%">
+    <img class="w3-image" src="assets/slide2.png" alt="Image 2" style="width:100%">
     <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
       <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
         <h1 class="w3-xlarge w3-text-red">Take control of your Mental State with Ray</h1>
@@ -49,7 +119,7 @@ img {margin-bottom: -8px;}
     </div>
   </div>
   <div class="mySlides w3-animate-opacity">
-    <img class="w3-image" src="assets/headerimage1.jpg" alt="Image 3" style="width:100%">
+    <img class="w3-image" src="assets/slide3.png" alt="Image 3" style="width:100%">
     <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
       <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
         <h1 class="w3-xlarge w3-text-indigo">Take control of your Mental State with Ray</h1>
@@ -59,10 +129,21 @@ img {margin-bottom: -8px;}
       </div>
     </div>
   </div>
-  <a class="w3-button w3-black w3-display-right w3-margin-right w3-round w3-hide-small w3-hover-light-grey" onclick="plusDivs(1)"><i class="fa fa-angle-right"></i></a>
-  <a class="w3-button w3-block w3-black w3-hide-large w3-hide-medium" onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right"></i></a>
+  <div class="mySlides w3-animate-opacity">
+    <img class="w3-image" src="assets/slide4.png" alt="Image 4" style="width:100%">
+    <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
+      <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+        <h1 class="w3-xlarge w3-text-yellow">Take control of your Mental State with Ray</h1>
+        <hr class="w3-opacity">
+        <p>Sign up for access to the beta when it releases</p>
+        <p><button class="w3-button w3-block w3-yellow w3-round" onclick="document.getElementById('download').style.display='block'">Sign Up</i></button></p>
+      </div>
+    </div>
+  </div>
+  <a class="w3-button w3-black w3-display-right w3-margin-right w3-round w3-hide-small w3-hover-light-grey" onclick="plusDivs(1)"> Next Image <i class="fa fa-angle-right"></i></a>
+  <a class="w3-button w3-block w3-black w3-hide-large w3-hide-medium" onclick="plusDivs(1)"> Next Image <i class="fa fa-angle-right"></i></a>
 </header>
-
+<a id="app">
 <!-- The App Section -->
 <div class="w3-padding-64 w3-white">
   <div class="w3-row-padding">
@@ -76,7 +157,7 @@ img {margin-bottom: -8px;}
       <img src="assets/logo.png" class="w3-image w3-right w3-hide-small" width="335" height="471" style="transform:translate(0%,20%)">
       <div class="w3-center w3-hide-large w3-hide-medium">
         <button class="w3-button w3-block w3-padding-large" onclick="document.getElementById('download').style.display='block'">
-          <i class="fa fa-download"></i> Download Application
+          Sign Up
         </button>
         <img src="/w3images/img_app.jpg" class="w3-image w3-margin-top" width="335" height="471">
       </div>
@@ -96,17 +177,58 @@ img {margin-bottom: -8px;}
     </div>
   </div>
 </div>
+<!-- features -->
+<div id="featurefree" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('featurefree').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+      <h2 class="w3-wide">Free</h2>
+      <p>Our app is Free Squared, Free Forver and Ad Free Forver</p>
+    </div>
+  </div>
+</div>
+
+<div id="featureNotifications" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('featureNotifications').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+      <h2 class="w3-wide">Supportive Notifications</h2>
+      <p>Our app supports you no matter where you are by sending you reassuring notifications</p>
+    </div>
+  </div>
+</div>
+
+<div id="featureSupport" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('featureSupport').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+      <h2 class="w3-wide">Emotional Support</h2>
+      <p>Our app provides you with the emotional support you need by allowing you to connect with therapists</p>
+    </div>
+  </div>
+</div>
+
+<div id="featureExercises" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('featureExercises').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+      <h2 class="w3-wide">Wellness Exercises</h2>
+      <p>Our app provides you with exercises to support the development of your mental wellness</p>
+    </div>
+  </div>
+</div>
 
 <!-- Clarity Section -->
 <div class="w3-padding-64 w3-light-grey">
   <div class="w3-row-padding">
     <div class="w3-col l4 m6">
-      <img class="w3-image w3-round-large w3-hide-small w3-grayscale" src="/w3images/app5.jpg" alt="App" width="335" height="471">
+      <img class="w3-image w3-round-large w3-hide-small" src="assets/happinesslogo.png" alt="App" width="335" height="471">
     </div>
     <div class="w3-col l8 m6">
-      <h1 class="w3-jumbo"><b>Our Mission</b></h1>
+      <a id="mission">
+      <h1 class="w3-jumbo" style="color:rgb(231,180,102)"><b>Our Mission</b></h1>
       <h1 class="w3-xxxlarge w3-text-red"><b></b></h1>
-      <p><span class="w3-xlarge">To help.</span> Ray is an app designed to encourage people to care for their own mental wellness
+      <p><span class="w3-xxlarge w3-text-blue">To help.</span> <br>Ray is an app designed to encourage people to care for their own mental wellness
         by providing them with the tools to build resiliency, self-awareness, and self-love.
 
     </div>
@@ -114,29 +236,30 @@ img {margin-bottom: -8px;}
 </div>
 
 <!-- Features Section -->
+<a id="features">
 <div class="w3-container w3-padding-64 w3-dark-grey w3-center">
-  <h1 class="w3-jumbo"><b>Features</b></h1>
-  <p>This app is just so lorem ipsum.</p>
+  <h1 class="w3-jumbo"><b>Features</b><br/></h1><h6> Click on them to Learn More</h6>
+<!--   <p>This app is just so lorem ipsum.</p> -->
 
   <div class="w3-row" style="margin-top:64px">
-    <div class="w3-col s3">
-      <i class="fa fa-bolt w3-text-orange w3-jumbo"></i>
+    <div class="w3-button" onclick="document.getElementById('featureExercises').style.display='block'" class="w3-col s3">
+      <i class="fas fa-walking w3-text-orange w3-jumbo"></i>
       <p>Wellness Exercises</p>
     </div>
-    <div class="w3-col s3">
+    <div class="w3-button" onclick="document.getElementById('featureSupport').style.display='block'" class="w3-col s3">
       <i class="fa fa-heart w3-text-red w3-jumbo"></i>
       <p>Emotional Support</p>
     </div>
-    <div class="w3-col s3">
-      <i class="fa fa-camera w3-text-yellow w3-jumbo"></i>
+    <div class="w3-button" onclick="document.getElementById('featureNotifications').style.display='block'" class="w3-col s3">
+      <i class="fa fa-bell w3-text-yellow w3-jumbo"></i>
       <p>Supportive Notifications</p>
     </div>
-    <div class="w3-col s3">
-      <i class="fa fa-battery-full w3-text-green w3-jumbo"></i>
+    <div class="w3-button" onclick="document.getElementById('featurefree').style.display='block'" class="w3-col s3">
+      <i class="fa fa-gift w3-text-green w3-jumbo"></i>
       <p>Free</p>
     </div>
   </div>
-
+ <!--
   <div class="w3-row" style="margin-top:64px">
     <div class="w3-col s3">
       <i class="fa fa-diamond w3-text-white w3-jumbo"></i>
@@ -153,7 +276,7 @@ img {margin-bottom: -8px;}
     <div class="w3-col s3">
       <i class="fa fa-hdd-o w3-text-cyan w3-jumbo"></i>
       <p>stuff</p>
-    </div>
+    </div> -->
   </div>
 
   <div class="w3-row" style="margin-top:64px">
@@ -175,7 +298,7 @@ img {margin-bottom: -8px;}
     </div> -->
   </div>
 </div>
-
+<a id="pricing">
 <!-- Pricing Section -->
 <div class="w3-padding-64 w3-center w3-white">
   <h1 class="w3-jumbo"><b>Pricing</b></h1>
@@ -201,10 +324,10 @@ img {margin-bottom: -8px;}
         <li class="w3-red w3-xlarge w3-padding-32">Add-ons</li>
         <li class="w3-padding-16">Physical Activities Scheduler</li>
         <li class="w3-padding-16">AI Chatbot</li>
-        <li class="w3-padding-16">stuff</li>
-        <li class="w3-padding-16">stuff</li>
+        <li class="w3-padding-16">TBA</li>
+        <li class="w3-padding-16">TBA</li>
         <li class="w3-padding-16">
-          <h2 class="w3-opacity">$5 / add-on</h2>
+          <h2 class="w3-opacity">$0.99 / month</h2>
         </li>
         <li class="w3-light-grey w3-padding-24">
           <button class="w3-button w3-black w3-padding-large" onclick="document.getElementById('download').style.display='block'">Sign Up</button>
@@ -216,14 +339,19 @@ img {margin-bottom: -8px;}
 </div>
 
 <!-- Footer -->
+<a id="contact">
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-xlarge">
   <div class="w3-section">
+    <a href="mailto:hello@raywellness.app"><i class="fas fa-envelope w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/ray.wellness/?hl=en" target="_blank" class="fa fa-instagram w3-hover-opacity"></a>
     <a href= "https://www.facebook.com/raywellnessapp/" target="_blank" class="fa fa-facebook-official w3-hover-opacity"></a>
     <a href="https://twitter.com/RayWellness" target="_blank" class="fa fa-twitter w3-hover-opacity"></a>
   </div>
+<<<<<<< HEAD
   
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+=======
+>>>>>>> master
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
