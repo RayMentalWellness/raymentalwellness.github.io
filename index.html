@@ -13,7 +13,7 @@
   gtag('config', 'UA-122868530-1');
 </script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -21,10 +21,50 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size: 16px;}
 img {margin-bottom: -8px;}
 .mySlides {display: none;}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    z-index: -1000;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
 </style>
 </head>
 <body class="w3-content w3-black" style="max-width:1500px;">
+<a id="slideshow">
 <!-- Header with Slideshow -->
+<div class="topnav">
+  <a href="#slideshow">Slideshow</a>
+  <a href="#app">The App</a>
+  <a href="#mission">Our Misson</a>
+  <a href="#features">Features</a>
+  <a href="#pricing">Add Ons</a>
+  <a href="#contact">Contact Us</a>
+</div>
 <header class="w3-display-container w3-center">
   <button class="w3-button w3-block w3-green w3-hide-large w3-hide-medium" onclick="document.getElementById('download').style.display='block'">Sign Up</button>
   <div class="mySlides w3-animate-opacity">
@@ -74,7 +114,7 @@ img {margin-bottom: -8px;}
   <a class="w3-button w3-black w3-display-right w3-margin-right w3-round w3-hide-small w3-hover-light-grey" onclick="plusDivs(1)"> Next Image <i class="fa fa-angle-right"></i></a>
   <a class="w3-button w3-block w3-black w3-hide-large w3-hide-medium" onclick="plusDivs(1)"> Next Image <i class="fa fa-angle-right"></i></a>
 </header>
-
+<a id="app">
 <!-- The App Section -->
 <div class="w3-padding-64 w3-white">
   <div class="w3-row-padding">
@@ -156,6 +196,7 @@ img {margin-bottom: -8px;}
       <img class="w3-image w3-round-large w3-hide-small" src="assets/happinesslogo.png" alt="App" width="335" height="471">
     </div>
     <div class="w3-col l8 m6">
+      <a id="mission">
       <h1 class="w3-jumbo" style="color:rgb(231,180,102)"><b>Our Mission</b></h1>
       <h1 class="w3-xxxlarge w3-text-red"><b></b></h1>
       <p><span class="w3-xxlarge w3-text-blue">To help.</span> <br>Ray is an app designed to encourage people to care for their own mental wellness
@@ -171,6 +212,7 @@ img {margin-bottom: -8px;}
 <!--   <p>This app is just so lorem ipsum.</p> -->
 
   <div class="w3-row" style="margin-top:64px">
+    <a id="features">
     <div onclick="document.getElementById('featureExercises').style.display='block'" class="w3-col s3">
       <i class="fas fa-walking w3-text-orange w3-jumbo"></i>
       <p>Wellness Exercises</p>
@@ -227,7 +269,7 @@ img {margin-bottom: -8px;}
     </div> -->
   </div>
 </div>
-
+<a id="pricing">
 <!-- Pricing Section -->
 <div class="w3-padding-64 w3-center w3-white">
   <h1 class="w3-jumbo"><b>Pricing</b></h1>
@@ -268,8 +310,10 @@ img {margin-bottom: -8px;}
 </div>
 
 <!-- Footer -->
+<a id="contact">
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-xlarge">
   <div class="w3-section">
+    <a href="mailto:hello@raywellness.app"><i class="fas fa-envelope w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/ray.wellness/?hl=en" target="_blank" class="fa fa-instagram w3-hover-opacity"></a>
     <!-- for later use
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
